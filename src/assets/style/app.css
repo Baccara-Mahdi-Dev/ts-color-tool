@@ -1,0 +1,242 @@
+/* #app {font-family: Avenir, Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-align: center;color: #2c3e50;margin-top: 60px;} */
+/* #app {font-family: Avenir, Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-align: center;color: #2c3e50;margin-top: 60px;} */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-family: "Raleway", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mono {
+    font-family: "Source Code Pro", monospace !important;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.__app-rendered {
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+/* Scrollbar styles */
+
+/* Firefox */
+* {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(0, 0, 0, 0.5) silver !important;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px !important;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: silver !important;
+    border-radius: 20px !important;
+    border: 3px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+
+
+legend {
+    font-size: larger;
+    margin: .3rem .5rem;
+}
+
+.scroll-box {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    height: fit-content !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: scroll !important;
+    overflow-wrap: unset !important;
+    display: flex !important;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+    overscroll-behavior-x: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    -ms-scroll-chaining: none !important;
+    -ms-scroll-snap-points-x: snapInterval(0%, 100%) !important;
+}
+
+.scroll-box::-webkit-scrollbar {
+    display: none !important;
+}
+
+.scroll-box>.my-auto {
+    margin-right: 5% !important;
+}
+
+.scroll-box>.my-auto:first-child {
+    margin-left: 10% !important;
+}
+
+.scroll-box>.my-auto:last-child {
+    margin-right: 10% !important;
+}
+
+.scroll-item {
+    display: block;
+    cursor: pointer !important;
+    border-radius: 25px !important;
+    border: none !important;
+    padding: 0 0.45rem !important;
+    box-shadow: 0 0 5px 0 rgba(209, 202, 202, 0.8) !important;
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 10px !important;
+    user-drag: none !important;
+    -webkit-user-drag: none !important;
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    -ms-user-select: none !important;
+}
+
+.scroll-item:hover {
+    transform: scale3d(1.1, 1.1, 1.1) !important;
+    transition: transform 330ms ease-in-out !important;
+}
+
+.scroll-item:active {
+    transform: scale3d(1.1, 1.1, 1.1) !important;
+    transition: transform 330ms ease-in-out !important;
+}
+
+.scroll-item:focus {
+    transform: scale3d(1.1, 1.1, 1.1) !important;
+    transition: transform 330ms ease-in-out !important;
+}
+
+.dot-bricks {
+    position: relative;
+    top: 8px;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: red;
+    box-shadow: 9991px -16px 0 0 red, 9991px 0 0 0 red, 10007px 0 0 0 red;
+    animation: dotBricks 4.2s infinite ease;
+}
+
+@keyframes dotBricks {
+    0% {
+        box-shadow: 9991px -16px 0 0 red, 9991px 0 0 0 red, 10007px 0 0 0 red;
+    }
+
+    8.333% {
+        box-shadow: 10007px -16px 0 0 red, 9991px 0 0 0 red, 10007px 0 0 0 red;
+    }
+
+    16.667% {
+        box-shadow: 10007px -16px 0 0 green, 9991px -16px 0 0 green,
+            10007px 0 0 0 green;
+    }
+
+    25% {
+        box-shadow: 10007px -16px 0 0 green, 9991px -16px 0 0 green,
+            9991px 0 0 0 green;
+    }
+
+    33.333% {
+        box-shadow: 10007px 0 0 0 green, 9991px -16px 0 0 green, 9991px 0 0 0 green;
+    }
+
+    41.667% {
+        box-shadow: 10007px 0 0 0 blue, 10007px -16px 0 0 blue, 9991px 0 0 0 blue;
+    }
+
+    50% {
+        box-shadow: 10007px 0 0 0 blue, 10007px -16px 0 0 blue,
+            9991px -16px 0 0 blue;
+    }
+
+    58.333% {
+        box-shadow: 9991px 0 0 0 blue, 10007px -16px 0 0 blue, 9991px -16px 0 0 blue;
+    }
+
+    66.666% {
+        box-shadow: 9991px 0 0 0 red, 10007px 0 0 0 red, 9991px -16px 0 0 red;
+    }
+
+    75% {
+        box-shadow: 9991px 0 0 0 red, 10007px 0 0 0 red, 10007px -16px 0 0 red;
+    }
+
+    83.333% {
+        box-shadow: 9991px -16px 0 0 red, 10007px 0 0 0 red, 10007px -16px 0 0 red;
+    }
+
+    /* 
+    91.667% {
+      box-shadow: 9991px -16px 0 0 red, 9991px 0 0 0 red, 10007px -16px 0 0 red;
+    }
+    100% {
+      box-shadow: 9991px -16px 0 0 red, 9991px 0 0 0 red, 10007px 0 0 0 red;
+    } */
+}
+
+
+.gradient-text {
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(255, 255, 255, 0.35));
+
+    background-color: #ca42a6;
+    background-image: linear-gradient(45deg,
+            #ca4246 8.666%,
+            #e16541 16.666%,
+            #e16541 23.333%,
+            #f18f43 33.333%,
+            #f18f43 45%,
+            #8b9862 50%,
+            #8b9862 66.666%,
+            #476098 96.666%,
+            #476098 83.333%,
+            #a7489b 93.333%,
+            #5f00a3 100%);
+
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-simple 35.75s alternate-reverse infinite;
+}
+
+@keyframes rainbow-text-simple {
+    0% {
+        background-size: 35%;
+    }
+
+    30% {
+        background-size: 65%;
+    }
+
+    60% {
+        background-size: 100%;
+    }
+
+    80% {
+        background-size: 65%;
+    }
+
+    100% {
+        background-size: 30%;
+    }
+}
