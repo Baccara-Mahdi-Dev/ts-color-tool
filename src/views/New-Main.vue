@@ -228,7 +228,7 @@ watch(base_colour_hex, () => {
                 secondary
                 circle
                 type="info"
-                @click="notify('todo :/', 'warning')"
+                @click="copy('https://github.com/Baccara-Mahdi-Dev/ts-color-tool')"
                 size="large"
                 color="#FFFFFF"
               >
