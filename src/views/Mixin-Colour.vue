@@ -197,6 +197,7 @@ watch(cl_2, () => {
               secondary
               circle
               type="info"
+              @click="copy('https://github.com/Baccara-Mahdi-Dev/ts-color-tool')"
               size="large"
               color="#FFFFFF"
             >
