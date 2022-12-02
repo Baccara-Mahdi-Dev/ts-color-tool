@@ -7,8 +7,9 @@ Icon autor: <a style="color:cyan" href="https://www.flaticon.com/authors/srip" t
 <br>
 <br>
 ###
-<span style="color:#42b983;">VUE SETUP basics commands</span>
-# ts-color-tool
+
+# <span style="color:#42b983;">VUE SETUP basics commands</span>
+ 
 
 ## Project setup
 ```
