@@ -51,7 +51,7 @@ const deg = ref(
 /* yoinked from my own site */
 /** could be rename to random and keep shuffle for inversion */
 const shuffleBg = () => {
-  const hsl = rndHslColour(100);
+  const hsl = rndHslColour();
   cl_1.value = "hsl(" + hsl[0] + "," + hsl[1] + "%," + hsl[2] + "%)";
   deg.value =
     ((Math.random() * 10) % 2 ? "" : "-") +
@@ -118,10 +118,10 @@ watch(cl_2, () => {
     </n-space>
     <div class="w-full h-full md:flex md:flex-row-reverse md:justify-evenly">
       <!-- ========== START OPTION AREA BUTTONS ========== -->
-      <n-space justify="center" class="\w-full px-10 mb-5 md:my-auto md:px-0">
+      <n-space justify="center" class="\w-full px-5 mb-5 md:my-auto md:px-0">
         <div
           :style="{ background: bg }"
-          class="grid align-middle place-items-center w-[400px] px-4 py-8 \w-fit h-[400px] border-2 md:border-4 rounded-tl-[3rem] my-auto rounded-br-[3rem]"
+          class="grid align-middle place-items-center w-[250px] px-4 py-8 \w-fit h-[250px] md:scale-110 border-2 md:border-4 rounded-tl-[3rem] my-auto rounded-br-[3rem]"
         >
           <p
             @click="copy(bg)"
@@ -132,7 +132,7 @@ watch(cl_2, () => {
         </div>
       </n-space>
       <div
-        class="relative flex px-6 py-2 mx-auto my-5 text-center align-middle border-2 md:my-auto md:flex md:px-3 md:flex-col w-fit h-fit md:-order-last border-slate-400 rounded-xl gap-y-3 md:gap-y-0 text-slate-400"
+        class="relative flex px-5 py-2 mx-auto my-5 text-center align-middle border-2 md:my-auto md:flex md:px-3 md:flex-col w-fit h-fit md:-order-last border-slate-400 rounded-xl gap-y-3 md:gap-y-0 text-slate-400"
       >
         <h3 class="my-auto">Options</h3>
 
@@ -217,32 +217,32 @@ watch(cl_2, () => {
           class="block w-full px-6 pt-2 pb-4 mx-auto mb-5 align-middle border md:my-auto wrap rounded-xl text-slate-100 overflow-clip"
         >
           <legend class="ml-5">&nbsp;&nbsp;Rotation&nbsp;&nbsp;</legend>
-          <n-button-group class="my-5">
-            <n-button @click="degSet(0)" round>
+          <div class="flex flex-wrap justify-between my-5 gap-x-3 gap-y-2">
+            <n-button @click="degSet(0)" ghost circle>
               <n-icon :component="ArrowDown" />
             </n-button>
-            <n-button @click="degSet(90)" ghost>
+            <n-button @click="degSet(90)" ghost circle>
               <n-icon :component="ArrowNarrowLeft" />
             </n-button>
-            <n-button @click="degSet(180)" ghost>
+            <n-button @click="degSet(180)" ghost circle>
               <n-icon :component="ArrowNarrowUp" />
             </n-button>
-            <n-button @click="degSet(-90)" ghost>
+            <n-button @click="degSet(-90)" ghost circle>
               <n-icon :component="ArrowNarrowRight" />
             </n-button>
-            <n-button @click="degSet(200)" ghost>
+            <n-button @click="degSet(200)" ghost circle>
               <n-icon :component="ArrowUpRight" />
             </n-button>
-            <n-button @click="degSet(-330)" ghost>
+            <n-button @click="degSet(-330)" ghost circle>
               <n-icon :component="ArrowDownLeft" />
             </n-button>
-            <n-button @click="degSet(330)" ghost>
+            <n-button @click="degSet(330)" ghost circle>
               <n-icon :component="ArrowUpLeft" />
             </n-button>
-            <n-button @click="degSet(-300)" round>
+            <n-button @click="degSet(-300)" ghost circle>
               <n-icon :component="ArrowDownRight" />
             </n-button>
-          </n-button-group>
+          </div>
           <n-slider
             v-model:value="deg"
             :default-value="deg"
@@ -258,13 +258,15 @@ watch(cl_2, () => {
           </n-slider>
         </fieldset>
         <fieldset
-          class="block w-full px-6 pt-2 pb-4 mx-auto mb-5 align-middle border md:my-auto wrap rounded-xl text-slate-100 overflow-clip"
+          class="block w-full px-3 pt-2 pb-4 mx-auto mb-5 align-middle border md:my-auto rounded-xl text-slate-100 overflow-clip"
         >
           <legend class="ml-5">&nbsp;&nbsp;Mixin&nbsp;&nbsp;</legend>
-          <span class="flex flex-row w-full py-2 h-fit">
+          <span
+            class="flex flex-row flex-wrap justify-center w-full py-2 h-fit"
+          >
             <n-color-picker
               :modes="[current_type]"
-              class="w-full min-h-[65px] rounded-md"
+              class="w-full min-h-[65px] rounded-md max-w-[200px]"
               v-model:value="cl_1"
               :show-alpha="false"
               :show-preview="true"
@@ -277,9 +279,8 @@ watch(cl_2, () => {
               ]"
             />
             <n-button
-              ghost
-              color="#EEEEEE"
-              class="h-full p-4 mx-3"
+              :color="cl_1"
+              class="p-4 mx-auto mt-4 h-fit md:m-0"
               strong
               secondary
               size="large"
@@ -289,10 +290,12 @@ watch(cl_2, () => {
             </n-button>
           </span>
           <br />
-          <span class="flex flex-row w-full py-2 h-fit">
+          <span
+            class="flex flex-row flex-wrap justify-center w-full py-2 h-fit"
+          >
             <n-color-picker
               :modes="[current_type]"
-              class="w-full min-h-[65px] rounded-md"
+              class="w-full min-h-[65px] rounded-md max-w-[200px]"
               v-model:value="cl_2"
               :show-alpha="false"
               :show-preview="true"
@@ -305,9 +308,8 @@ watch(cl_2, () => {
               ]"
             />
             <n-button
-              ghost
-              color="#EEEEEE"
-              class="h-full p-4 mx-3"
+              :color="cl_2"
+              class="p-4 mx-auto mt-4 h-fit md:m-0"
               strong
               secondary
               size="large"

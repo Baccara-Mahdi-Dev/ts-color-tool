@@ -283,7 +283,7 @@ watch(base_colour_hex, () => {
               ]"
               class="min-w-[42px] w-fit h-full text-center flex m-2 py-2 px-4 bg-opacity-30 backdrop-blur-lg"
             >
-              <span class="mono">{{ bc_hsl[0] }}°</span>
+              <span class="text-xs mono">{{ bc_hsl[0] }}°</span>
             </div>
             <div
               :class="[
@@ -293,7 +293,7 @@ watch(base_colour_hex, () => {
               ]"
               class="min-w-[42px] w-fit h-full text-center flex m-2 py-2 px-4 bg-opacity-30 backdrop-blur-lg"
             >
-              <span class="mono">{{ bc_hsl[1] }}%</span>
+              <span class="text-xs mono">{{ bc_hsl[1] }}%</span>
             </div>
             <div
               :class="[
@@ -303,7 +303,7 @@ watch(base_colour_hex, () => {
               ]"
               class="min-w-[42px] w-fit h-full text-center flex m-2 py-2 px-4 bg-opacity-30 backdrop-blur-lg"
             >
-              <span class="mono">{{ bc_hsl[2] }}%</span>
+              <span class="text-xs mono">{{ bc_hsl[2] }}%</span>
             </div>
           </div>
           <n-button
@@ -335,7 +335,7 @@ watch(base_colour_hex, () => {
               ]"
               class="min-w-[42px] w-fit h-full text-center flex m-2 py-2 px-4 bg-opacity-30 backdrop-blur-lg"
             >
-              <span class="mono">{{ bc_rgb[0] }}</span>
+              <span class="text-xs mono">{{ bc_rgb[0] }}</span>
             </div>
             <div
               :class="[
@@ -345,7 +345,7 @@ watch(base_colour_hex, () => {
               ]"
               class="min-w-[42px] w-fit h-full text-center flex m-2 py-2 px-4 bg-opacity-30 backdrop-blur-lg"
             >
-              <span class="mono">{{ bc_rgb[1] }}</span>
+              <span class="text-xs mono">{{ bc_rgb[1] }}</span>
             </div>
             <div
               :class="[
@@ -355,7 +355,7 @@ watch(base_colour_hex, () => {
               ]"
               class="min-w-[42px] w-fit h-full text-center flex m-2 py-2 px-4 bg-opacity-30 backdrop-blur-lg"
             >
-              <span class="mono">{{ bc_rgb[2] }}</span>
+              <span class="text-xs mono">{{ bc_rgb[2] }}</span>
             </div>
           </div>
           <n-button
