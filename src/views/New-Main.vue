@@ -228,7 +228,9 @@ watch(base_colour_hex, () => {
                 secondary
                 circle
                 type="info"
-                @click="copy('https://github.com/Baccara-Mahdi-Dev/ts-color-tool')"
+                @click="
+                  copy('https://github.com/Baccara-Mahdi-Dev/ts-color-tool')
+                "
                 size="large"
                 color="#FFFFFF"
               >
@@ -242,9 +244,9 @@ watch(base_colour_hex, () => {
         <!-- ========== END OPTION AREA BUTTONS ========== -->
       </n-space>
       <!-- ========== START HEX RGB HSL==========-->
-      <div class="px-10 md:px-0">
+      <div class="w-full px-4 md:px-0">
         <fieldset
-          class="flex flex-row w-full px-4 pt-2 pb-4 mx-5 my-auto align-middle border md:mx-2 wrap rounded-xl text-slate-100 overflow-clip"
+          class="flex flex-row w-full px-4 pt-2 pb-4 mx-auto my-auto align-middle border md:mx-2 wrap rounded-xl text-slate-100 overflow-clip"
         >
           <legend class="ml-5">&nbsp;&nbsp;HEX&nbsp;&nbsp;</legend>
           <n-color-picker
@@ -266,11 +268,11 @@ watch(base_colour_hex, () => {
           </n-button>
         </fieldset>
         <fieldset
-          class="flex min-h-[65px] flex-row px-4 pt-2 pb-4 mx-5 md:mx-2 align-middle border wrap w-full my-auto rounded-xl text-slate-100"
+          class="flex min-h-[65px] flex-row px-4 pt-2 pb-4 mx-auto md:mx-2 align-middle border wrap w-full my-auto rounded-xl text-slate-100"
         >
           <legend class="ml-5">&nbsp;&nbsp;HSL&nbsp;&nbsp;</legend>
           <div
-            class="text-slate-100 w-full min-w-[42px] h-fit rounded-md flex justify-center py-1 align-middle"
+            class="text-slate-100 w-full min-w-[42px] h-fit rounded-md flex flex-wrap justify-center py-1 align-middle"
             :style="{ background: base_colour_hex }"
           >
             <div
@@ -307,7 +309,7 @@ watch(base_colour_hex, () => {
           <n-button
             ghost
             color="#EEEEEE"
-            class="h-full p-4 mx-3"
+            class="h-full p-4 mx-3 my-auto"
             strong
             secondary
             size="large"
@@ -317,12 +319,12 @@ watch(base_colour_hex, () => {
           </n-button>
         </fieldset>
         <fieldset
-          class="flex min-h-[65px] flex-row px-4 mx-5 md:mx-2 align-middle border wrap w-full my-auto rounded-xl text-slate-100 pt-2 pb-4"
+          class="flex min-h-[65px] flex-row px-4 mx-auto md:mx-2 align-middle border wrap w-full my-auto rounded-xl text-slate-100 pt-2 pb-4"
         >
           <!-- :style="{ 'border-color': base_colour_hex ?? '#b4004b' }" -->
           <legend class="ml-5">&nbsp;&nbsp;RGB&nbsp;&nbsp;</legend>
           <div
-            class="w-full min-w-[42px] h-fit rounded-md flex justify-center p-1 align-middle"
+            class="flex-wrap w-full min-w-[42px] h-fit rounded-md flex justify-center p-1 align-middle"
             :style="{ background: base_colour_hex }"
           >
             <div
@@ -359,7 +361,7 @@ watch(base_colour_hex, () => {
           <n-button
             ghost
             color="#EEEEEE"
-            class="h-full p-4 mx-3"
+            class="h-full p-4 mx-3 my-auto"
             strong
             secondary
             size="large"
@@ -372,7 +374,7 @@ watch(base_colour_hex, () => {
       <!-- ==========  END HEX RGB HSL==========-->
     </div>
     <!-- ========== START OPPOSITE AND SHADES ========== -->
-    <div class="mb-8 md:flex md:justify-center md:gap-x-5 md:flex-wrap">
+    <div class="w-full mb-8 md:flex md:justify-center md:gap-x-5 md:flex-wrap">
       <span class="mx-auto w-full md:w-[45%]">
         <ShadesComponent
           :light_shades="light_shades"
