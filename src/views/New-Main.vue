@@ -154,12 +154,14 @@ watch(base_colour_hex, () => {
   -->
   <div class="mt-4 mb-8 mx-3 md:mx-2 h-screen min-h-[80vh] text-slate-100">
     <h1 class="z-10 text-center text-9xl mono gradient-text">TCT</h1>
-    <div class="w-full lg:flex lg:flex-row-reverse lg:justify-evenly h-fit">
+    <div
+      class="flex flex-col justify-center w-full lg:flex-row-reverse lg:justify-evenly h-fit"
+    >
       <n-space justify="center" class="my-5">
         <!-- ========== START MAIN COLOR BOX ========== -->
         <div
           :style="{ background: base_colour_hex }"
-          class="w-full min-w-[250px] min-h-[200px] lg:min-w-[300px] h-full border-2 lg:border-4 rounded-tl-[3rem] rounded-br-[3rem]"
+          class="w-full min-w-[250px] min-h-[200px] mx-auto blcok md:w-4/5 lg:max-w-3xl h-full border-2 lg:border-4 rounded-tl-[3rem] rounded-br-[3rem]"
         ></div>
         <!-- ========== END MAIN COLOR BOX ========== -->
         <!-- ========== START OPTION AREA BUTTONS ========== -->
@@ -244,7 +246,9 @@ watch(base_colour_hex, () => {
         <!-- ========== END OPTION AREA BUTTONS ========== -->
       </n-space>
       <!-- ========== START HEX RGB HSL==========-->
-      <div class="w-full px-4 mx-0 md:mx-auto sm:w-2/5 md:w-3/5 md:px-0">
+      <div
+        class="w-full max-w-md px-4 mx-auto lg:mx-0 \sm:w-\4/6 m\d:w-2\/5 lg\:w\-2/5 md:px-0"
+      >
         <fieldset
           class="flex flex-row w-full px-4 pt-2 pb-4 mx-auto my-auto align-middle border md:mx-2 wrap rounded-xl text-slate-100 overflow-clip"
         >
