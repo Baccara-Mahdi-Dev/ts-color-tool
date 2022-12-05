@@ -121,7 +121,7 @@ watch(cl_2, () => {
       <n-space justify="center" class="\w-full px-5 mb-5 md:my-auto md:px-0">
         <div
           :style="{ background: bg }"
-          class="grid align-middle place-items-center w-[250px] px-4 py-8 \w-fit h-[250px] md:scale-110 border-2 md:border-4 rounded-tl-[3rem] my-auto rounded-br-[3rem]"
+          class="grid align-middle place-items-center w-[250px] px-4 py-8 \w-fit h-[250px] md:w-[270px] lg:w-[333px] border-2 md:border-4 rounded-tl-[3rem] my-auto rounded-br-[3rem]"
         >
           <p
             @click="copy(bg)"
