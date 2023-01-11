@@ -59,16 +59,16 @@ const shuffleBg = () => {
   cl_2.value =
     "hsl(" + hueReverse(hsl[1], hsl[0]) + "," + hsl[1] + "%," + 70 + "%)";
 };
-const copy = (msg = "some text"): void => {
+const copy = (copy_val = "some text", msg="Copied!" ): void => {
   const storage = document.createElement("textarea");
   storage.style.display = "none";
-  storage.value = msg;
+  storage.value = copy_val;
   storage.select();
   storage.setSelectionRange(0, 99999);
   navigator.clipboard
     .writeText(storage.value)
     .then(() => {
-      notify("Copied!", "info");
+      notify(msg, "info");
     })
     .catch((e) => {
       //:c something went wrong
@@ -198,7 +198,7 @@ watch(cl_2, () => {
               circle
               type="info"
               @click="
-                copy('https://github.com/Baccara-Mahdi-Dev/ts-color-tool')
+                copy('https://github.com/Baccara-Mahdi-Dev/ts-color-tool', 'The link to the repository has been copied! ')
               "
               size="large"
               color="#FFFFFF"
@@ -328,5 +328,3 @@ watch(cl_2, () => {
     <br />
   </div>
 </template>
-
-<style scoped></style>
