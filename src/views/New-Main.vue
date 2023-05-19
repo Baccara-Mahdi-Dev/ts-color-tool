@@ -247,7 +247,7 @@ watch(base_colour_hex, () => {
       </n-space>
       <!-- ========== START HEX RGB HSL==========-->
       <div
-        class="w-full max-w-md px-4 mx-auto lg:mx-0 \sm:w-\4/6 m\d:w-2\/5 lg\:w\-2/5 md:px-0"
+        class="w-full max-w-md px-4 mx-auto lg:mx-0 \sm:w-\4/6 m\d:w-2\/5 lg\:w\-2/5 md:px-0 mb-40"
       >
         <fieldset
           class="flex flex-row w-full px-4 pt-2 pb-4 mx-auto my-auto align-middle border md:mx-2 wrap rounded-xl text-slate-100 overflow-clip"
@@ -388,11 +388,8 @@ watch(base_colour_hex, () => {
       <span class="px-5 mx-auto w-full md:w-[45%]">
         <OppositeComponent :opposite_hex="opposite_hex ?? '#0A01A0'" />
       </span>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
+     </div>
+    <!--  <br /> <br />  <br /> <br /> -->
     <!-- ========== END OPPOSITE AND SHADES ========== -->
   </div>
 </template>
