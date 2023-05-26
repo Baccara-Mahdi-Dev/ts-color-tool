@@ -59,7 +59,7 @@ const shuffleBg = () => {
   cl_2.value =
     "hsl(" + hueReverse(hsl[1], hsl[0]) + "," + hsl[1] + "%," + 70 + "%)";
 };
-const copy = (copy_val = "some text", msg="Copied!" ): void => {
+const copy = (copy_val = "some text", msg = "Copied!" ): void => {
   const storage = document.createElement("textarea");
   storage.style.display = "none";
   storage.value = copy_val;
