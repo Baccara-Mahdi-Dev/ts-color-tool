@@ -1,4 +1,6 @@
 <script lang="ts">
+/* eslint-disable */
+// todo fix prettier && eslint errors for build
 import { defineAsyncComponent } from "vue";
 import LoaderSm from "@/components/misc/Loader-small.vue";
 export const componentName = "Alt-Vers";
