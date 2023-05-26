@@ -1,4 +1,6 @@
 <script lang="ts">
+/* eslint-disable */
+// todo fix prettier errors
 export const componentName = "Mixin-Colours";
 export default {
   name: componentName,
@@ -198,7 +200,10 @@ watch(cl_2, () => {
               circle
               type="info"
               @click="
-                copy('https://github.com/Baccara-Mahdi-Dev/ts-color-tool', 'The link to the repository has been copied! ')
+                copy(
+                  'https://github.com/Baccara-Mahdi-Dev/ts-color-tool',
+                  'The link to the repository has been copied!'
+                )
               "
               size="large"
               color="#FFFFFF"
