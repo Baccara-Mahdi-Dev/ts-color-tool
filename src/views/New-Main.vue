@@ -163,12 +163,12 @@ watch(base_colour_hex, () => {
         <!-- ========== START MAIN COLOR BOX ========== -->
         <div
           :style="{ background: base_colour_hex }"
-          class="w-full min-w-[250px] min-h-[200px] mx-auto blcok md:w-4/5 lg:max-w-3xl \h-full h-[365px] border-2 lg:border-4 rounded-tl-[3rem] rounded-br-[3rem]"
+          class="w-full min-w-[250px] min-h-[200px] mx-auto blcok md:w-4/5 lg:max-w-3xl h-full md:h-[365px] border-2 lg:border-4 rounded-tl-[3rem] rounded-br-[3rem]"
         ></div>
         <!-- ========== END MAIN COLOR BOX ========== -->
         <!-- ========== START OPTION AREA BUTTONS ========== -->
         <div
-          class="relative flex flex-row px-6 py-2 mx-auto mt-3 text-center align-middle border-2 sm:my-auto sm:flex sm:px-3 sm:flex-col w-fit h-fit sm:-order-last border-slate-400 rounded-xl gap-y-3 sm:gap-y-0 lg:h-full lg:gap-y-3 text-slate-400"
+          class="relative flex flex-row px-6 py-2 mx-auto mt-3 text-center align-middle border-2 sm:my-auto sm:flex sm:px-3 sm:flex-col w-fit h-fit sm:-order-last border-slate-400 rounded-xl gap-y-3 sm:gap-y-0 \lg:h-f\ull md:h-[365px] lg:gap-y-3 text-slate-400"
         >
           <h3 class="my-auto">Options</h3>
           <n-popover trigger="hover">
