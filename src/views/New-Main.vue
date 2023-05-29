@@ -163,7 +163,7 @@ watch(base_colour_hex, () => {
         <!-- ========== START MAIN COLOR BOX ========== -->
         <div
           :style="{ background: base_colour_hex }"
-          class="w-full min-w-[250px] min-h-[200px] mx-auto blcok md:w-4/5 lg:max-w-3xl h-full border-2 lg:border-4 rounded-tl-[3rem] rounded-br-[3rem]"
+          class="w-full min-w-[250px] min-h-[200px] mx-auto blcok md:w-4/5 lg:max-w-3xl \h-full h-[365px] border-2 lg:border-4 rounded-tl-[3rem] rounded-br-[3rem]"
         ></div>
         <!-- ========== END MAIN COLOR BOX ========== -->
         <!-- ========== START OPTION AREA BUTTONS ========== -->
