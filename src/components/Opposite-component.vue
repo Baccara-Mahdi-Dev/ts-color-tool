@@ -1,4 +1,6 @@
 <script lang="ts">
+/* eslint-disable */
+
 import DividerGeneric from "@/components/misc/Divider-generic.vue";
 export const componentName = "Opposite-component";
 export default {

@@ -24,13 +24,13 @@ const spinning = () => {
 <template>
   <div
     :class="[drop_shw ? 'min-h-[69px]' : 'h-[48px]']"
-    class="fixed bottom-0 left-0 z-10 w-full bg-black border-t-2 mono h-fit rounded-xl border-t-white"
+    class="fixed bottom-0 left-0 z-10 w-full bg-zinc-800 bg-opacity-20 backdrop-blur \bg-black border-t-2 mono h-fit rounded-xl border-t-white"
   >
     <div class="relative flex justify-center w-full h-full">
       <button
         :class="{ 'animate-spin duration-75 ease-in': spin_clk }"
         @click="spinning"
-        class="absolute top-0 z-50 h-auto px-2 py-1 -my-8 text-white bg-black border-2 border-white rounded-full hover:duration-300 hover:ease-in-out w-fit hover:text-emerald-200 hover:border-emerald-200"
+        class="absolute top-0 z-50 h-auto p-2 -my-8 text-white bg-emerald-600  backdrop-blur \bg-black border-2 border-white rounded-full \hover:duration-300 \hover:ease-in-out w-fit \hover:text-emerald-200 \hover:border-emerald-200"
       >
         <n-icon
           class="rotate-45 transform-gpu"
