@@ -8,3 +8,6 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build]
+  cache = { paths = ["!node_modules/**"] }
